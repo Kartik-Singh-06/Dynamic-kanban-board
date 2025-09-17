@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <h1>Dynamic Kanban Board</h1>
+        
+        <div class="task-form">
+            <input type="text" id="taskTitle" placeholder="Task title..." maxlength="100">
+            <textarea id="taskDescription" placeholder="Task description..." maxlength="300" rows="3"></textarea>
+            <button id="addBtn">Add Task</button>
+        </div>
+
+        <div class="board">
+            <div class="column" data-status="todo">
+                <h3>To Do</h3>
+                <div class="drop-zone" id="todo-zone"></div>
+            </div>
+            
+            <div class="column" data-status="inprogress">
+                <h3>In Progress</h3>
+                <div class="drop-zone" id="inprogress-zone"></div>
+            </div>
+            
+            <div class="column" data-status="done">
+                <h3>Done</h3>
+                <div class="drop-zone" id="done-zone"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/utils/utils.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
